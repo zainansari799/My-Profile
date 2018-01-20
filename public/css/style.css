@@ -357,6 +357,9 @@ ul.leftMenu li {
     #portfolio ul.design li, #portfolio ul li{
         margin: 20px;
     }
+    #portfolio ul.design li img{
+        width: 100%;
+    }
     .profileDetailsResponsive{
         display: block;
         padding: 25px;
