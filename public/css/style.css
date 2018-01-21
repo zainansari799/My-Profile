@@ -404,6 +404,9 @@ ul.leftMenu li {
     #portfolio ul.design li, #portfolio ul li{
         margin: 20px;
     }
+    #portfolio ul.design li:hover i, #portfolio ul.design li i{
+        font-size: 50px;
+    }
     #portfolio ul.design li img{
         width: 100%;
     }
