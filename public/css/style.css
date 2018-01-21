@@ -253,7 +253,7 @@ ul.leftMenu li {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    font-size: 25px;
+    font-size: 30px;
     color: #264e57;
 }
 .horizontal-row{
@@ -266,11 +266,34 @@ ul.leftMenu li {
     display: inline-block;
     width: 33%;
     line-height: 220px;
+    position: relative;
 }
 #portfolio ul.design li img{
     width: 200px;
     height: auto;
     display: inline-block !important;
+    box-shadow: 2px 5px 10px #aaa;
+}
+#portfolio ul.design li:hover i{
+    font-size: 100px;
+    position: absolute;
+    color: #000;
+    bottom: 35%;
+    z-index: 1;
+    opacity: 0.7;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#portfolio ul.design li i{
+    font-size: 100px;
+    position: absolute;
+    color: #fff;
+    bottom: 20px;
+    left: 0px;
+    right: 0px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    opacity: 0;
 }
 #portfolio h4{
     text-align: center;
@@ -283,6 +306,30 @@ ul.leftMenu li {
     font-family: 'ProximaNova-Regular', sans-serif;
     font-size: 12px;
 }
+
+/* Lightbox Open */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+}
+.lightbox:target {
+    outline: none;
+    display: block;
+}
+/* Lightbox Close */
+
 @media only screen and (min-width: 1600px) {
 }
 @media only screen and (min-width: 1900px) {
