@@ -444,4 +444,10 @@ ul.leftMenu li {
     #contact ul h4 i{
         font-size: 26px;
     }
+    #portfolio ul li{
+        width: 48%;
+    }
+    .lightbox img{
+        margin-top: 18%;
+    }
 }
