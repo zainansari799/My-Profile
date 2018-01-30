@@ -235,6 +235,11 @@ ul.leftMenu li {
     color: #666;
     line-height: 1.4;
 }
+#portfolio h4{
+    text-align: center;
+    color: #666;
+    font-family: 'ProximaNova-SemiBold', sans-serif;
+}
 #portfolio ul{
     padding: 25px;
     text-align: center;
@@ -262,49 +267,34 @@ ul.leftMenu li {
     margin-left: auto;
     margin-right: auto;
 }
-#portfolio ul.design li{
-    display: inline-block;
-    width: 33%;
-    line-height: 220px;
-    position: relative;
+#portfolio .design .image-column img{
+    box-shadow: 0px 2px 20px #aaa;
+    margin: 25px auto;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-#portfolio ul.design li img{
-    width: 200px;
-    height: auto;
-    display: inline-block !important;
-    box-shadow: 2px 5px 10px #aaa;
+#portfolio .design .image-column img:hover{
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
 }
-#portfolio ul.design li:hover i{
-    font-size: 100px;
-    position: absolute;
-    color: #000;
-    bottom: 35%;
-    z-index: 1;
-    opacity: 0.7;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+.image-row{
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
-#portfolio ul.design li i{
-    font-size: 100px;
-    position: absolute;
-    color: #fff;
-    bottom: 20px;
-    left: 0px;
-    right: 0px;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    opacity: 0;
+.image-column{
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 35%;
+    padding: 0 30px;
 }
-#portfolio h4{
-    text-align: center;
-    color: #666;
-    font-family: 'ProximaNova-SemiBold', sans-serif;
+.image-column:first-child{
+    padding-left: 50px;
 }
-#footer{
-    color: #666;
-    text-align: center;
-    font-family: 'ProximaNova-Regular', sans-serif;
-    font-size: 12px;
+.image-column:last-child{
+    padding-right: 50px;
 }
 
 /* Lightbox Open */
@@ -322,7 +312,8 @@ ul.leftMenu li {
 .lightbox img {
     max-width: 90%;
     max-height: 80%;
-    margin-top: 2%;
+    margin-top: 5%;
+    transform: scale(1.2);
 }
 .lightbox:target {
     outline: none;
@@ -330,6 +321,12 @@ ul.leftMenu li {
 }
 /* Lightbox Close */
 
+#footer{
+    color: #666;
+    text-align: center;
+    font-family: 'ProximaNova-Regular', sans-serif;
+    font-size: 12px;
+}
 @media only screen and (min-width: 1600px) {
 }
 @media only screen and (min-width: 1900px) {
@@ -339,6 +336,14 @@ ul.leftMenu li {
 @media only screen and (max-width: 1200px) {
 }
 @media only screen and (max-width: 992px) {
+    .image-column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+    .image-column:last-child {
+        padding-left: 50px;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -401,14 +406,10 @@ ul.leftMenu li {
         margin: 0px;
         padding: 65px 25px 25px 25px;
     }
-    #portfolio ul.design li, #portfolio ul li{
-        margin: 20px;
-    }
-    #portfolio ul.design li:hover i, #portfolio ul.design li i{
-        font-size: 50px;
-    }
-    #portfolio ul.design li img{
-        width: 100%;
+    .image-column{
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
     .profileDetailsResponsive{
         display: block;
