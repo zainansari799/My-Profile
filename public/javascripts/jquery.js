@@ -1,10 +1,8 @@
 /**
  * Created by ANSARI on 8/5/2015.
- */
-
-
+*/
 $(document).ready(function(){
-    /*$('a[href^="#"]').on('click',function (e) {
+    $('.leftMenu a[href^="#"], a#top[href^="#"], ul.menu-links li a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
         var target = this.hash;
@@ -15,16 +13,17 @@ $(document).ready(function(){
         }, 900, 'swing', function () {
             window.location.hash = target;
         });
-    });*/
-    $('.leftMenu a[href^="#"],#menuShow li a[href^="#"],a#top[href^="#"]').on('click',function (e) {
+    });
+
+    $('ul.menu-links li a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
         var target = this.hash;
         var $target = $(target);
 
-        $('html, body').stop().animate({
+        $('html, body').stop().delay(1000).animate({
             'scrollTop': $target.offset().top
-        }, 900, 'swing', function () {
+        }, 1800, 'swing', function () {
             window.location.hash = target;
         });
     });
@@ -41,12 +40,17 @@ $(document).ready(function(){
         }
     });
 
-
-
-
+    /* Menu Open */
+    $("#menu").click(function(){
+        $("#right-menu").animate({
+            right: "0px"
+        });
+    });
+    $(".rightSide, ul.menu-links li a[href^='#']").click(function(){
+        $("#right-menu").animate({
+            right: "-110%"
+        });
+    });
+    /* Menu Close */
 
 });
-
-
-
-
